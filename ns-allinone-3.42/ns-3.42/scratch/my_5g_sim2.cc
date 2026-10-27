@@ -76,7 +76,7 @@ void PerformRekey() {
     g_totalCryptoEnergy += g_rekeyCostEnergy;
     g_totalCryptoDelay  += g_rekeyCostDelay;
     g_rekeyCount++;
-    NS_LOG_INFO("🔑 Re-keying event #" << g_rekeyCount << " at " << now << "s");
+    NS_LOG_INFO("Re-keying event #" << g_rekeyCount << " at " << now << "s");
     
     Simulator::Schedule(Seconds(g_rekeyIntervalSec), &PerformRekey);
 }
